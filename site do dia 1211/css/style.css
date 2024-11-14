@@ -5,13 +5,16 @@
     box-sizing: border-box;
 }
 
+/* Estilo geral */
 body {
     font-family: 'Times New Roman', serif;
     background-color: #f0f0f0;
     color: #333;
     width: 100%;
+    line-height: 1.6;
 }
 
+/* Cabeçalho */
 header {
     width: 100%;
 }
@@ -34,7 +37,8 @@ header {
 /* Menu de navegação */
 #menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     background-color: rgb(230, 230, 250);
     padding: 10px;
 }
@@ -49,7 +53,11 @@ header {
     color: #333;
 }
 
-/* Seção principal do Home */
+#menu .menu-toggle {
+    display: none;
+}
+
+/* Seção principal */
 #home {
     margin: 20px;
     max-width: 900px;
@@ -58,27 +66,12 @@ header {
     display: flex;
 }
 
-/* Estilo para a história */
-#homehistory {
-    text-align: justify;
-    padding: 50px 100px;
-    text-shadow: #333;
-}
-
 /* Galeria */
 .gallery {
     display: grid;
-    /* Define a estrutura da grid com 6 colunas */
-    grid-template-columns: repeat(3, 1fr); /* Altere de 6 para 3 colunas em telas menores */
-    grid-template-rows: auto;
-    grid-gap: 1.5rem; /* Define o espaçamento de 1.5rem entre as células da grid (colunas e linhas) */
-    margin: 20px auto;
-    max-width: 1200px;
-}
-
-.gallery__item {
-    overflow: hidden;
-    position: relative;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 5vw);
+    grid-gap: 1.5rem;
 }
 
 .gallery__img {
@@ -88,13 +81,44 @@ header {
     display: block;
 }
 
-/* Ajustes para redes sociais */
 .social {
     border-radius: 50%;
     width: 40px;
     height: 40px;
     object-fit: cover;
     margin: 10px;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #6a5acd;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #5b4bb7;
 }
 
 footer {
@@ -111,33 +135,23 @@ footer {
     body {
         font-size: 14px;
     }
-
-    #cabecalho {
-        height: auto;
-    }
-
+    
     #menu {
         flex-direction: column;
         align-items: center;
+    }
+
+    #menu .menu-toggle {
+        display: block;
+        cursor: pointer;
     }
 
     #menu p {
         margin: 10px 0;
     }
 
-    #home {
-        margin: 10px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container {
-        width: 100%;
-        margin: 1rem;
-    }
-
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em dispositivos pequenos */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     footer {
@@ -152,10 +166,6 @@ footer {
         font-size: 16px;
     }
 
-    #cabecalho {
-        height: 200px;
-    }
-
     #menu {
         display: flex;
         justify-content: space-around;
@@ -163,20 +173,12 @@ footer {
         padding: 10px;
     }
 
-    #home {
-        margin: 20px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container {
-        width: 80%;
+    #menu .menu-toggle {
+        display: none;
     }
 
     .gallery {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 colunas em tablets */
-        grid-gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     footer {
@@ -185,9 +187,9 @@ footer {
     }
 }
 
-/* Para desktops e telas grandes */
+/* Para telas grandes */
 @media screen and (min-width: 769px) {
     .gallery {
-        grid-template-columns: repeat(6, 1fr); /* 6 colunas para telas grandes */
+        grid-template-columns: repeat(6, 1fr);
     }
 }
