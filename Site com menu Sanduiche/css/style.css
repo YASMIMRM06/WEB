@@ -10,7 +10,6 @@ body {
     font-family: 'Times New Roman', serif;
     background-color: #f0f0f0;
     color: #333;
-    width: 100%;
     line-height: 1.6;
 }
 
@@ -61,24 +60,55 @@ header {
 #home {
     margin: 20px;
     max-width: 900px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    display: flex;
+    text-align: center;
+  
+}
+#biblioteca {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 /* Galeria */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 5vw);
-    grid-gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 1rem;
+    margin: 20px;
+}
+.gallery__item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery__item:nth-child(2),
+.gallery__item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.gallery__item:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.gallery__item:nth-child(5),
+.gallery__item:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 1;
 }
 
 .gallery__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .social {
@@ -130,6 +160,25 @@ footer {
 
 /* --- Media Queries --- */
 
+/* Media Queries para responsividade */
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    #biblioteca {
+        width: 100%;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
 /* Para dispositivos com tela muito pequena (celulares) */
 @media screen and (max-width: 480px) {
     body {
@@ -226,3 +275,33 @@ footer {
         display: flex; /* Mostrar o menu quando ativado */
     }
 }
+/* Ajuste da imagem na página inicial */
+#home-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+}
+
+/* Para telas pequenas */
+@media (max-width: 480px) {
+    #home-img {
+        width: 90%; /* Mantém a imagem quase do tamanho total da tela */
+    }
+}
+
+/* Para tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    #home-img {
+        width: 80%; /* Ajuste para tablets */
+    }
+}
+
+/* Para telas grandes */
+@media (min-width: 769px) {
+    #home-img {
+        width: 50%; /* Ajuste para desktops */
+    }
+}
+
