@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <header>
         <div id="cabecalho">
             <img id="book-stack" src="img/book-stack.png" alt="Book">
         </div>
-
+    
+        <span id="hamburger-menu" onclick="toggleMenu()">&#9776;</span>
+    
         <nav id="menu">
+            <a href="home.html"><p>Home</p></a>
             <a href="historia.html"><p>História</p></a>
             <a href="galeria.html"><p>Galeria</p></a>
             <a href="contatos.html"><p>Contato</p></a>
@@ -50,3 +52,10 @@
     </footer>
 </body>
 </html>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("show");
+    }
+</script>
+
