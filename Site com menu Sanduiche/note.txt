@@ -1,4 +1,4 @@
-file:///D:/Site%20com%20menu%20Sanduiche/WEB/Site%20com%20menu%20Sanduiche/home.html
+
 /* codigo css dia 12 do 11 de 2024*/
 /* Resetando as margens e padding */
 * {
