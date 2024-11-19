@@ -58,14 +58,16 @@ header {
 
 /* Seção principal */
 #home {
-    margin: 20px;
+    margin: 0;
+    padding: 20px;
     max-width: 900px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-  
+    justify-content: center; /* Centralizar verticalmente */
+    align-items: center; /* Centralizar horizontalmente */
+    text-align: center; /* Centralizar o texto */
 }
+
 #biblioteca {
     width: 100%;
     max-width: 600px;
