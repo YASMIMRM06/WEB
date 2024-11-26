@@ -62,11 +62,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 - **Escalabilidade**: Esta abordagem é mais adequada para projetos simples. Se o projeto crescer, é recomendado usar ferramentas como o `create-react-app` ou configurar um ambiente de build para otimizar o desempenho e facilitar o desenvolvimento.
 - **Falta de recursos avançados**: Sem um ambiente de build (como Webpack ou Babel), você não pode utilizar funcionalidades avançadas como ES6+ (por exemplo, import/export), JSX em arquivos separados, ou recursos como hot reloading.
 
-FORMAS QUE USEI PARA AUXILIAR NA CRIAÇAO DO MEU SITE
-https://www.youtube.com/results?search_query=como+criar+um+site+simples+com+react+sem+instalar+
-https://youtu.be/3JKCyuLGHho?si=kVh403hLkLL3tOkJ
-https://youtu.be/A8YlNy4NqbI?si=QRtSt_NOOdNLOXhe
-
-https://playcode.io/react
-
-https://codesandbox.io/p/sandbox/react-new?file=%2Fsrc%2FApp.js
+### 5. Exemplos e Referências Utilizadas
+Para garantir que seguisse boas práticas, consultei as seguintes fontes:
+Vídeos no YouTube:
+Como criar um site simples com React.js
+Abordagem prática com React
+Ferramentas Online para Testes:
+PlayCode.io
+CodeSandbox.io
