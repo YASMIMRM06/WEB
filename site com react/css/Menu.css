@@ -1,0 +1,20 @@
+nav {
+    background-color: #8b4513;
+    padding: 15px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ffd700;
+  }
+  
