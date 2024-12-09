@@ -1,0 +1,20 @@
+1. Instalar React
+Certifique-se de ter o Node.js instalado. Em seguida, crie o projeto React:
+    npx create-react-app livros-site
+    cd livros-site
+
+2.Criar o Header e Footer
+
+3.Criar Páginas
+
+4. Configurar Rotas
+No App.js, importe o React Router:
+    npm install react-router-dom  
+
+5. Estilização styles.css    
+
+6. Adicionar Imagem de Logo
+    Coloque uma imagem chamada logo.png na pasta img para aparecer no cabeçalho.
+    
+7.Agora, basta rodar o projeto:
+    npm start
